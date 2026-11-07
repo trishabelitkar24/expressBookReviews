@@ -37,7 +37,9 @@ public_users.get('/', async (req, res) => {
         const response = await axios.get('http://localhost:5000/api/books');
         return res.status(200).json(response.data);
     } catch (error) {
-        return res.status(500).json({ message: 'Unable to retrieve books' });
+        return res.status(500).json({
+            message: 'Unable to retrieve books'
+        });
     }
 });
 
@@ -58,7 +60,9 @@ public_users.get('/isbn/:isbn', async (req, res) => {
 
         return res.status(200).json(book);
     } catch (error) {
-        return res.status(500).json({ message: 'Unable to retrieve book' });
+        return res.status(500).json({
+            message: 'Unable to retrieve book'
+        });
     }
 });
 
@@ -78,7 +82,9 @@ public_users.get('/author/:author', async (req, res) => {
 
         return res.status(200).json(result);
     } catch (error) {
-        return res.status(500).json({ message: 'Unable to retrieve books' });
+        return res.status(500).json({
+            message: 'Unable to retrieve books'
+        });
     }
 });
 
@@ -98,7 +104,9 @@ public_users.get('/title/:title', async (req, res) => {
 
         return res.status(200).json(result);
     } catch (error) {
-        return res.status(500).json({ message: 'Unable to retrieve books' });
+        return res.status(500).json({
+            message: 'Unable to retrieve books'
+        });
     }
 });
 
